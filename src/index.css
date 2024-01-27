@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-image: linear-gradient(to bottom, #14131b, #08070c);
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+.range {
+	height: 0.3em;
+}
+
+.range::-moz-range-thumb {
+	width: 1em;
+	height: 1em;
+	border-radius: 50%;
+	background: #18171f;
+	border: 0.15em solid #a4ffaf;
+}
+
+.range::-moz-range-progress {
+	background-color: #a4ffaf;
+	height: 100%;
+}
+
+.range::-moz-range-track {
+	background-color: #08070c;
+	height: 100%;
+}
+
+.label {
+	cursor: pointer;
+	user-select: none;
+}
+
+.label::before {
+	content: "";
+	width: 1em;
+	height: 1em;
+	display: inline-block;
+	border: 0.15em solid #a4ffaf;
+	margin-right: 1em;
+}
+
+.checkbox:checked + .label::before {
+	background-color: #a4ffaf;
+}
+
+.checkbox {
+	@apply opacity-0 absolute -z-50;
+}
+
+#popUp {
+	scale: 0;
+}
