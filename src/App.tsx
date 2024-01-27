@@ -68,7 +68,7 @@ const App = () => {
 		setPassword(newPass);
 	}
 
-	function handleClipboard(e: React.FormEvent<HTMLButtonElement>) {
+	function handleClipboard(e: any) {
 		const popUp = document.getElementById("popUp");
 		if (!popUp) return;
 
